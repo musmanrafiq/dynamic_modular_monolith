@@ -1,4 +1,4 @@
-﻿using Em.Common;
+﻿using Em.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;

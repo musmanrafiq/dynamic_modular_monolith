@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Em.Common
+namespace Em.Core
 {
     public class PluginManager
     {

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EM.Modules.Feature.Outflow.Controllers
 {
 
-    [Route("users")]
+    [Route("Outflow")]
     public class OutflowController : Controller
     {
         private IList<OutflowModel> _db;

@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebHostApp", "WebHostApp", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{03F58035-E50A-4A3A-8B5D-6202507B70EC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{03F58035-E50A-4A3A-8B5D-6202507B70EC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{1A0E1C82-A782-49E0-9142-525991113776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Em.Common", "Common\Em.Common\Em.Common.csproj", "{70AACDEF-4783-4712-9130-0FFBCC9F35DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Em.Core", "Core\Em.Core\Em.Core.csproj", "{70AACDEF-4783-4712-9130-0FFBCC9F35DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.Modules.Feature.Outflow", "Modules\EM.Modules.Feature.Outflow\EM.Modules.Feature.Outflow.csproj", "{A7AA1074-8DB7-49DA-9FCF-E94EF2F4B185}"
 EndProject

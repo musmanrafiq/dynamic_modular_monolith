@@ -17,14 +17,14 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="9.0.5" />
   </ItemGroup>
 
-  <ItemGroup>
-	  <ProjectReference Include="..\..\Common\Em.Common\Em.Common.csproj">
-		  <Private>false</Private>
-	  </ProjectReference>
-  </ItemGroup>
-
 	<ItemGroup>
 		<EmbeddedResource Include="Views\**\*.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Core\Em.Core\Em.Core.csproj">
+		  <Private>false</Private>
+	  </ProjectReference>
 	</ItemGroup>
 	
 	<Target Name="CopyPluginToModulesFolder" AfterTargets="Build">
@@ -36,8 +36,17 @@
 			<PluginDlls Include="$(OutputPath)\*.dll" />
 		</ItemGroup>
 
-		<Copy SourceFiles="@(PluginDlls)"
-			  DestinationFolder="$(MainAppModulesDir)"
+		<Copy SourceFiles="@(PluginDlls)" DestinationFolder="$(MainAppModulesDir)" SkipUnchangedFiles="true" />
+	</Target>
+	<Target Name="CopyViews" AfterTargets="Build">
+		<PropertyGroup>
+			<MainAppModulesDir>..\..\WebHostApp\EM.WebHostApp\bin\$(Configuration)\net9.0\Modules</MainAppModulesDir>
+		</PropertyGroup>
+		<ItemGroup>
+			<ViewFiles Include="Views\**\*.*" />
+		</ItemGroup>
+		<Copy SourceFiles="@(ViewFiles)"
+			  DestinationFolder="$(OutDir)\Modules\Outflow\%(RecursiveDir)"
 			  SkipUnchangedFiles="true" />
 	</Target>
 </Project>
